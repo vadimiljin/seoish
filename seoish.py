@@ -13,9 +13,7 @@ def combinator(inputfile, outputfile, counts = None):
 	#print(split2)
 	all_vars = list(itertools.product(*split2))
 	random.shuffle(all_vars)
-	if not counts:
-		pass
-	else:
+	if counts:
 		all_vars = all_vars[0:counts]
 	with open(outputfile,'w') as file:
 		for _i in all_vars:
